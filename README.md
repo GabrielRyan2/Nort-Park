@@ -3,6 +3,10 @@
 Protótipo funcional de um sistema de agendamento para o complexo esportivo
 **Nort Park** (identidade visual laranja / preto / branco).
 
+## Tecnologias
+
+React 18, JavaScript e Vite 5, com dados de demonstração em localStorage.
+
 ## Fluxo implementado
 
 1. **Landing** → apresentação do complexo e CTA para criar conta.
@@ -23,11 +27,18 @@ Protótipo funcional de um sistema de agendamento para o complexo esportivo
 ## Como rodar
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Abra `http://localhost:5173`.
+É necessário Node.js 18 ou superior e npm. Abra a URL exibida pelo Vite no terminal (normalmente `http://localhost:5173`).
+
+Para gerar e visualizar a versão de produção:
+
+```bash
+npm run build
+npm run preview
+```
 
 ## O que é protótipo (e o que muda em produção)
 
@@ -55,8 +66,7 @@ real:
      de devolução (endpoint de refund do PSP) na chave de origem do
      pagamento, e só então marcar a reserva como cancelada.
 - **Hospedagem** → front-end estático (Vercel/Netlify) + Edge Functions para
-  qualquer coisa que use chave secreta (Pix, e-mail de confirmação etc.),
-  seguindo o mesmo padrão usado no projeto `pulso-vet` deste computador.
+  qualquer coisa que use chave secreta (Pix, e-mail de confirmação etc.).
 
 ## Estrutura
 
